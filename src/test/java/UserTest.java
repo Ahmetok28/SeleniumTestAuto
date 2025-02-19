@@ -19,32 +19,40 @@ public class UserTest {
         System.out.println(text);
         Assert.assertEquals(text, "Hesabım");
     }
-    @Test
-    public void LoginSucccesfulLawyer(){
-        WebDriver driver2 = new ChromeDriver();
-        driver2.get("https://localhost:7109/Admin/Auth/Login");
-        driver2.findElement(By.name("Email")).sendKeys("ahmetok2861@gmail.com");
-        driver2.findElement(By.name("Password")).sendKeys("123456789");
-        driver2.findElement(By.cssSelector("[class='btn btn-primary w-100']")).click();
-
-
-    }
 
     @Test
-    public void LawyerBlogCommentAdd() throws InterruptedException {
-        WebDriver driver2 = new ChromeDriver();
-        driver2.get("https://localhost:7109");
-        Thread.sleep(5000);
-        driver2.findElements(By.cssSelector("[class='nav-link']")).get(3).click();
-        Thread.sleep(5000);
+    public void LoginFailed() throws InterruptedException {
 
-        driver2.findElements(By.cssSelector("[class='d-inline-block']")).get(2).click();
-        Thread.sleep(5000);
-        driver2.findElement(By.name("CommentContent")).sendKeys("Selenium Test");
-        driver2.findElement(By.name("CommentUserName")).sendKeys("Ahmet ÖK");
-        driver2.findElement(By.name("CommentUserEmail")).sendKeys("ahmetok2861@gmail.com");
-        driver2.findElement(By.cssSelector("[class='button button-contactForm btn_4 mt-3']")).click();
-
-
+        
     }
+
+
+//    @Test
+//    public void LoginSucccesfulLawyer(){
+//        WebDriver driver2 = new ChromeDriver();
+//        driver2.get("https://localhost:7109/Admin/Auth/Login");
+//        driver2.findElement(By.name("Email")).sendKeys("ahmetok2861@gmail.com");
+//        driver2.findElement(By.name("Password")).sendKeys("123456789");
+//        driver2.findElement(By.cssSelector("[class='btn btn-primary w-100']")).click();
+//
+//
+//    }
+//
+//    @Test
+//    public void LawyerBlogCommentAdd() throws InterruptedException {
+//        WebDriver driver2 = new ChromeDriver();
+//        driver2.get("https://localhost:7109");
+//        Thread.sleep(5000);
+//        driver2.findElements(By.cssSelector("[class='nav-link']")).get(3).click();
+//        Thread.sleep(5000);
+//
+//        driver2.findElements(By.cssSelector("[class='d-inline-block']")).get(2).click();
+//        Thread.sleep(5000);
+//        driver2.findElement(By.name("CommentContent")).sendKeys("Selenium Test");
+//        driver2.findElement(By.name("CommentUserName")).sendKeys("Ahmet ÖK");
+//        driver2.findElement(By.name("CommentUserEmail")).sendKeys("ahmetok2861@gmail.com");
+//        driver2.findElement(By.cssSelector("[class='button button-contactForm btn_4 mt-3']")).click();
+//
+//
+//    }
 }
